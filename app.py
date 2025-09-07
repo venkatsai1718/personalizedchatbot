@@ -8,7 +8,7 @@ from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
 
-API_KEY = "AIzaSyDbvETkEt3FC4x-Ir3UodhvtQMRDQbEDqw"
+API_KEY = st.secrets['API_KEY']
 
 
 chat_model = ChatGoogleGenerativeAI(api_key=API_KEY, model='gemini-1.5-flash', temparature=0.2)
