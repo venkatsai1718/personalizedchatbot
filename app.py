@@ -58,15 +58,14 @@ def handle_query(query, index, chunks):
     
     prompt = PromptTemplate(
         template="""
-        You are an helpful assistant to assist healthcare professionals.
-        
+        You are a helpful assistant answering questions based on the following context:        
+
         Context:
         {context}
         
         Question:
         {query}
-        
-        Answer:""",
+        """,
         input_variables=['context', 'query']
     )
     
