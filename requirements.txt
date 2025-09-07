@@ -1,0 +1,13 @@
+# LangChain Core
+langchain
+langchain-core
+langchain-community
+
+langchain-google-genai
+google-generativeai
+
+numpy
+scikit-learn
+streamlit
+tiktoken
+faiss-cpu
