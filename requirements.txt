@@ -11,3 +11,4 @@ scikit-learn
 streamlit
 tiktoken
 faiss-cpu
+pypdf
