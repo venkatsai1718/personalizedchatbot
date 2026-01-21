@@ -12,7 +12,9 @@ from langchain_huggingface import HuggingFaceEmbeddings
 import time
 
 # OpenRouter Configuration
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+# OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+
+OPENROUTER_API_KEY = st.secrets["OPENROUTER_API_KEY"]
 
 # Free Models
 FREE_MODELS = {
