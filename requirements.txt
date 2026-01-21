@@ -1,4 +1,5 @@
 langchain-huggingface
+sentence-transformers
 requests
 numpy
 scikit-learn
