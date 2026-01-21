@@ -4,12 +4,12 @@ from pypdf import PdfReader
 import tiktoken
 import faiss
 import requests
-import os
-from dotenv import load_dotenv
-load_dotenv()
-
 from langchain_huggingface import HuggingFaceEmbeddings
 import time
+
+# import os
+# from dotenv import load_dotenv
+# load_dotenv()
 
 # OpenRouter Configuration
 # OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
