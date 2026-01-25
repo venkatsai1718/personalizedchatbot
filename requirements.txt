@@ -1,5 +1,3 @@
-langchain-huggingface
-sentence-transformers
 numpy
 scikit-learn
 streamlit

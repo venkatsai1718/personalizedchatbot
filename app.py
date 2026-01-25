@@ -3,16 +3,15 @@ import numpy as np
 from pypdf import PdfReader
 import tiktoken
 import faiss
-from langchain_huggingface import HuggingFaceEmbeddings
 import google.generativeai as genai
 
-# import os
-# from dotenv import load_dotenv
-# load_dotenv()
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
-# GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
+# GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=GEMINI_API_KEY)
 
 def chat_with_gemini(prompt, temperature=0.2):
@@ -23,9 +22,12 @@ def chat_with_gemini(prompt, temperature=0.2):
     except Exception as e:
         return f"⚠️ Error: {str(e)}"
 
-# Embedding model
-embedding_model = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2"
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
+
+# Replace your existing HuggingFaceEmbeddings with this:
+embedding_model = GoogleGenerativeAIEmbeddings(
+    model="models/gemini-embedding-001",
+    google_api_key=GEMINI_API_KEY
 )
 
 def read_pdf(file):
