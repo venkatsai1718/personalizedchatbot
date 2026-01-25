@@ -1,9 +1,9 @@
 langchain-huggingface
-sentence-transformers
-requests
 numpy
 scikit-learn
 streamlit
 tiktoken
 faiss-cpu
 pypdf
+langchain-community
+google-generativeai
